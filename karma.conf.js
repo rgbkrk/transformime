@@ -5,7 +5,7 @@ module.exports = function(config) {
         frameworks: ['browserify', 'mocha'],
 
         files: [
-            'src/*.js',
+            'lib/*.js',
             'test/*.js'
         ],
 
@@ -13,13 +13,12 @@ module.exports = function(config) {
         ],
 
         preprocessors: {
-            'src/*.js': ['browserify'],
+            'lib/*.js': ['browserify'],
             'test/*.js': ['browserify']
         },
 
         browserify: {
-            debug: true,
-            transform: [ 'babelify' ]
+            debug: true
         },
 
         // test results reporter to use
