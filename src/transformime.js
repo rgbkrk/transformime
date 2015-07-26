@@ -73,9 +73,7 @@ class Transformime {
      */
     transformAll(bundle, doc) {
         var mimetypes = Object.keys(bundle);
-        var promises = mimetypes.map( mimetype => {
-            return this.transformRetainMimetype(bundle[mimetype], mimetype, doc);
-        });
+        var promises = mimetypes.map( m => this.transformRetainMimetype(bundle[m], m, doc) );
         return Promise.all(promises);
     }
 
